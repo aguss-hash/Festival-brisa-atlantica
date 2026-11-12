@@ -1,9 +1,70 @@
 <!DOCTYPE html>
-<html lang="es-Es">
+<html lang="es-ES">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Festival Brisa Atlántica - Arinaga</title>
+  <style>
+    body {
+      background-color: #fff7e6;
+      color: #1d2b3a;
+      font-family: Verdana, Arial, sans-serif;
+      font-size: 18px;
+      line-height: 1.5;
+      margin: 0 auto;
+      max-width: 900px;
+      padding: 10px 20px;
+    }
+
+    h1, h2, h3, h4 {
+      color: #0b4f6c;
+      font-family: Georgia, serif;
+    }
+
+    a { color: #0b4f6c; }
+
+    img { max-width: 100%; height: auto; }
+
+    table, th, td {
+      border: 2px solid #0b4f6c;
+      border-collapse: collapse;
+    }
+
+    th, td { padding: 8px; text-align: left; }
+
+    th { background-color: #0b4f6c; color: #ffffff; }
+
+    aside {
+      background-color: #ffe9c2;
+      padding: 10px 20px;
+    }
+
+    fieldset { margin-bottom: 15px; }
+
+    input[type="text"], input[type="email"], input[type="tel"], select, textarea {
+      display: block;
+      font-size: 1rem;
+      width: 100%;
+      max-width: 400px;
+    }
+
+    button {
+      background-color: #b83a0a;
+      color: #ffffff;
+      font-size: 1.1rem;
+      padding: 10px 20px;
+      border: none;
+    }
+
+    footer {
+      background-color: #083a50;
+      color: #ffffff;
+      padding: 10px 20px;
+      text-align: center;
+    }
+
+    footer a { color: #ffd98a; }
+  </style>
 </head>
 <body>
 
@@ -19,6 +80,7 @@
       <li><a href="#artistas">Artistas</a></li>
       <li><a href="#programa">Programa</a></li>
       <li><a href="#informacion">Información</a></li>
+      <li><a href="#inscripcion">Inscripción</a></li>
       <li><a href="#privacidad">Privacidad</a></li>
     </ul>
   </nav>
@@ -121,6 +183,66 @@
       <h2>Normas y transporte</h2>
       <p>Se ruega respetar a artistas y asistentes, y no entrar con vidrio. Para llegar, consulta las guaguas en <a href="https://www.guaguasglobal.com/" target="_blank" rel="noopener noreferrer">Guaguas Global</a>.</p>
     </aside>
+
+    <section id="inscripcion">
+      <h2>Formulario de inscripción</h2>
+
+      <form action="" method="post">
+
+        <fieldset>
+          <legend>Datos personales</legend>
+
+          <label for="nombre">Nombre y apellidos *</label>
+          <input type="text" id="nombre" name="nombre" required>
+
+          <label for="email">Correo electrónico *</label>
+          <input type="email" id="email" name="email" required>
+
+          <label for="telefono">Teléfono</label>
+          <input type="tel" id="telefono" name="telefono">
+        </fieldset>
+
+        <fieldset>
+          <legend>Actividad preferida</legend>
+          <label for="actividad">Elige una actividad *</label>
+          <select id="actividad" name="actividad" required>
+            <option value="">Selecciona</option>
+            <option value="percusion">Taller de percusión</option>
+            <option value="cocina">Taller de cocina canaria</option>
+            <option value="cuentacuentos">Cuentacuentos infantil</option>
+            <option value="voluntariado">Voluntariado</option>
+          </select>
+        </fieldset>
+
+        <fieldset>
+          <legend>Horario preferido</legend>
+          <input type="radio" id="manana" name="horario" value="manana" required>
+          <label for="manana">Mañana</label>
+          <input type="radio" id="tarde" name="horario" value="tarde">
+          <label for="tarde">Tarde</label>
+          <input type="radio" id="noche" name="horario" value="noche">
+          <label for="noche">Noche</label>
+        </fieldset>
+
+        <fieldset>
+          <legend>Servicios de interés</legend>
+          <input type="checkbox" id="transporte" name="servicios" value="transporte">
+          <label for="transporte">Transporte</label>
+          <input type="checkbox" id="accesibilidad" name="servicios" value="accesibilidad">
+          <label for="accesibilidad">Accesibilidad</label>
+          <input type="checkbox" id="comida" name="servicios" value="comida">
+          <label for="comida">Comida</label>
+        </fieldset>
+
+        <fieldset>
+          <legend>Comentarios</legend>
+          <label for="comentarios">Escribe aquí tus comentarios</label>
+          <textarea id="comentarios" name="comentarios" rows="4"></textarea>
+        </fieldset>
+
+        <button type="submit">Enviar inscripción</button>
+      </form>
+    </section>
 
     <section id="privacidad">
       <h2>Política de privacidad</h2>
